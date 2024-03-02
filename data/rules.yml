@@ -1,0 +1,22 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Respond to greeting and happy mood
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Respond to book search inquiry
+  steps:
+  - intent: search_book
+  - action: utter_Search_book
+
+
+
+  

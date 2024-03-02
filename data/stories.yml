@@ -1,0 +1,54 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: Express Thanks
+  steps:
+  - intent: thank
+  - action: utter_thanks
+
+- story: Recommend song
+  steps:
+  - intent: recommend_song
+  - action: utter_recommend_song
+
+- story: Goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Recommend a book based on genre only
+  steps:
+  - intent: request_book_recommendation
+  - slot_was_set:
+    - genre: true
+  - action: action_search_books
+
+
+- story: Book details inquiry
+  steps:
+  - intent: book_details  
+  - action: utter_give_details
+
+
+- story: Latest book releases inquiry
+  steps:
+  - intent: latest_book_releases
+  - action: action_latest_book_releases
+  - action: utter_latest_book_releases
+
+- story: Popular authors inquiry
+  steps:
+  - intent: popular_authors
+  - action: action_popular_authors
+  - action: utter_popular_authors
+
+- story: Book search inquiry
+  steps:
+  - intent: search_book
+  - action: utter_Search_book
